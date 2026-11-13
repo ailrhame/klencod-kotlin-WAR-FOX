@@ -1,28 +1,19 @@
+
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
 }
 
 android {
-    namespace "com.war.fox"
+    namespace 'com.war.fox'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.war.fox"
-        minSdk 24
+        applicationId 'com.war.fox'
+        minSdk 26
         targetSdk 34
         versionCode 1
-        versionName "1.0"
-    }
-
-    buildTypes {
-        debug {
-            minifyEnabled false
-        }
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
+        versionName '1.0'
     }
 
     compileOptions {
@@ -33,17 +24,4 @@ android {
     kotlinOptions {
         jvmTarget = '17'
     }
-
-    sourceSets {
-        main {
-            java.srcDirs = ['src/main/java']
-            res.srcDirs = ['src/main/res']
-            assets.srcDirs = ['src/main/assets']
-        }
-    }
-}
-
-dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
-    // kotlin-stdlib مضمّن تلقائياً من Kotlin Gradle Plugin
 }
